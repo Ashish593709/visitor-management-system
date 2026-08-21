@@ -126,31 +126,32 @@ body {
             <h2>Visitor Details</h2>
             <p class="form-title">Please enter your details</p>
 
-            <form>
+            <form id="visitorForm">
 
                 <div class="input-group">
                     <label>Visitor Name</label>
-                    <input type="text" placeholder="Enter your name">
+                    <input type="text" name="visitorName" placeholder="Enter your name">
                 </div>
 
                 <div class="input-group">
                     <label>Mobile Number</label>
-                    <input type="tel" placeholder="Enter mobile number">
+                    <input type="tel" name="mobile" placeholder="Enter mobile number">
                 </div>
 
                 <div class="input-group">
                     <label>Whom To Meet</label>
-                    <input type="text" placeholder="Enter person's name">
+                    
+                  <input type="text" name="whomToMeet" placeholder="Enter person's name">
                 </div>
 
                 <div class="input-group">
                     <label>Purpose of Visit</label>
-                    <input type="text" placeholder="Enter purpose of visit">
+                    <input type="text" name="purpose" placeholder="Enter purpose of visit">
                 </div>
 
                 <div class="input-group">
                     <label>Company / Organization</label>
-                    <input type="text" placeholder="Enter company name">
+                    <input type="text" name="company" placeholder="Enter company name">
                 </div>
 
                 <button type="submit" class="submit-btn">
@@ -162,6 +163,35 @@ body {
         </div>
 
     </div>
+<script>
+const form = document.getElementById("visitorForm");
 
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const data = {
+        visitorName: form.visitorName.value,
+        mobile: form.mobile.value,
+        whomToMeet: form.whomToMeet.value,
+        purpose: form.purpose.value,
+        company: form.company.value
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbz-aml9Fiuov6oejVqF9msVmUrXrBst-PwQMQjYoDozdhC5ji9aRjzrWOHyP-bn9C4-/exec", {
+        method: "POST",
+        body: JSON.stringify(data)
+    })
+    .then(response => response.text())
+    .then(result => {
+        console.log(result);
+        alert("Form submitted successfully!");
+        form.reset();
+    })
+    .catch(error => {
+        console.error(error);
+        alert("Data save nahi hua.");
+    });
+});
+</script>
 </body>
 </html>
