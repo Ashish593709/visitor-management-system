@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+<!-- 
+    <style>
+        .container {
+            height: 500px;
+            width: 399px;
+            background-color: aliceblue;
+        }
+
+        .text {
+            /* border: 1px solid black; */
+            height: 100px;
+            width: 300px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text {
+            /* border: 1px solid black; */
+            height: 100px;
+            width: 395px;
+
+        }
+
+        .applivevms {
+            margin-left: 67px;
+            margin-bottom: -14px;
+            font-weight: bold;
+            font-size: 23px;
+        }
+
+        .visitor {
+            margin-left: 67px;
+            color: rgb(96, 169, 197);
+        }
+
+        .pleasesel {
+            margin-top: -7px;
+            color: rgb(134, 140, 145);
+        }
+
+        .checkin {
+            /* border: 1px solid black; */
+            height: 140px;
+            width: 355px;
+            margin: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 23px;
+            background-color: white;
+            border-radius: 35px;
+
+        }
+
+        .checkout {
+            /* border: 1px solid black; */
+            height: 140px;
+            width: 355px;
+            margin: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 23px;
+            background-color: white;
+            border-radius: 35px;
+        }
+    </style> -->
+  
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+       min-height: 100vh;
+        width: 399px;
+        max-width: 100%;
+        background-color: rgb(186, 206, 224);
+    }
+
+    .text {
+        /* border: 1px solid black; */
+        height: 100px;
+        width: 300px;
+        max-width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text {
+        /* border: 1px solid black; */
+        height: 100px;
+        width: 395px;
+        max-width: 100%;
+    }
+
+    .applivevms {
+        margin-left: 67px;
+        margin-bottom: -14px;
+        font-weight: bold;
+        font-size: 23px;
+    }
+
+    .visitor {
+        margin-left: 67px;
+        color: rgb(96, 169, 197);
+    }
+
+    .pleasesel {
+        margin-top: -7px;
+        color: rgb(134, 140, 145);
+    }
+
+    .checkin {
+        /* border: 1px solid black; */
+        height: 140px;
+        width: 355px;
+        max-width: calc(100% - 44px);
+        margin: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 23px;
+        background-color: white;
+        border-radius: 35px;
+    }
+
+    .checkbtn{
+        text-decoration: none;
+    }
+
+    .checkout {
+        /* border: 1px solid black; */
+        height: 140px;
+        width: 355px;
+        max-width: calc(100% - 44px);
+        margin: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 23px;
+        background-color: white;
+        border-radius: 35px;
+    }
+
+    /* Only responsive changes */
+    @media (max-width: 450px) {
+        .container {
+            width: 100%;
+        }
+
+        .text {
+            width: 100%;
+        }
+
+        .applivevms,
+        .visitor {
+            margin-left: 17%;
+        }
+
+        .checkin,
+        .checkout {
+            width: auto;
+        }
+    }
+</style>
+
+
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <div class="text">
+            <p class="applivevms">Appliv VMS</p>
+            <p class="visitor">Visitor Registration</p>
+            <p class="pleasesel">Please Select an option below to continue.</p>
+
+        </div>
+        <div class="checkin">
+            <i class="fa-solid fa-circle-arrow-down"></i>
+            <a class="checkbtn" href="loginform.html">check In</a>
+        </div>
+        <div class="checkout">
+            <i class="fa-solid fa-circle-arrow-down"></i>
+            check out
+        </div>
+    </div>
+
+
+</body>
+
+</html>
